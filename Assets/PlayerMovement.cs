@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovment : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float fallingSpeed = 3.5f;
+    
 
     private CustomInput input = null;
     private Rigidbody2D rb = null;
@@ -35,7 +37,7 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = moveVector * moveSpeed;
+        rb.velocity = moveVector * moveSpeed + new Vector2(0, -fallingSpeed);
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext callbackContext)

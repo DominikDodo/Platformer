@@ -109,7 +109,7 @@ public class enemyPatrol : MonoBehaviour
                 }
                 // TODO: zimplementowa? to
                 // aby ?atwiej by?o zgubi? z czasem
-                // chasingRange -= 0.01f * Time.deltaTime; 
+                chasingRange -= 0.2f * Time.deltaTime; 
 
                 Vector2 direction = player.transform.position - transform.position;
                 // vector wskazuj?cy w kierunku gracza
